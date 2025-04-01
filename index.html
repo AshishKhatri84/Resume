@@ -9,39 +9,45 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(to right, #ffffff, #e3f2fd);
-            color: #333;
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            color: #fff;
             text-align: center;
         }
         .container {
-            max-width: 500px;
+            max-width: 700px;
             margin: 50px auto;
             padding: 20px;
             background: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            color: #333;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
             border-radius: 10px;
+            text-align: center;
         }
         .info h2 {
             margin-bottom: 10px;
+            color: #007bff;
         }
         .info p {
             margin: 5px 0;
-        }
-        a.task-link {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 15px;
-            background: #007bff;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-        a.task-link:hover {
-            background: #0056b3;
+            font-size: 16px;
         }
         .footer {
-            margin-top: 30px;
+            margin-top: 20px;
             font-size: 14px;
+            color: #ddd;
+        }
+        .pdf-container {
+            margin-top: 20px;
+            width: 100%;
+            height: 500px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
         }
     </style>
 </head>
@@ -49,11 +55,15 @@
 
     <div class="container">
         <div class="info">
-            <p>Name: Ashish</p>
-            <p>Reg. No: 22BAI10080</p>
-            <p>Email: <a href="mailto:ashish2022@vitbhopal.ac.in">ashish2022@vitbhopal.ac.in</a></p>
+            <h2>Resume</h2>
+            <p><strong>Name:</strong> Ashish Khatri</p>
+            <p><strong>Email:</strong> <a href="mailto:44234ashish@gmail.com">44234ashish@gmail.com</a></p>
         </div>
-        <a class="task-link" href="/Resume/Resume.pdf" target="_blank">View Resume</a>
+
+        <div class="pdf-container">
+            <iframe src="/Resume/Resume.pdf"></iframe>
+        </div>
+
         <div class="footer">
             <p>&copy; 2025 Ashish Khatri | VIT Bhopal</p>
         </div>
