@@ -1,105 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume</title>
-    <style>
-        /* Import Google Font */
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resume</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
 
-        /* Global Styles */
-        body {
-            font-family: 'Inter', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(to right, #2c3e50, #4ca1af); /* Soft Blue-Grey */
-            color: #f5f5f5;
-            text-align: center;
-        }
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #2c3e50, #4ca1af);
+      color: #f5f5f5;
+      text-align: center;
+    }
 
-        /* Main Container */
-        .container {
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 25px;
-            background: rgba(255, 255, 255, 0.12);
-            border-radius: 15px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .container:hover {
-            transform: scale(1.015);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
-        }
+    .container {
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 25px;
+      background: rgba(255, 255, 255, 0.12);
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-        /* Header */
-        .info h2 {
-            font-size: 28px;
-            color: #e0e0e0;
-            margin-bottom: 10px;
-            font-weight: 600;
-        }
+    .container:hover {
+      transform: scale(1.015);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    }
 
-        /* Footer */
-        .footer {
-            margin-top: 20px;
-            font-size: 14px;
-            color: #d0d0d0;
-        }
+    .info h2 {
+      font-size: 28px;
+      color: #e0e0e0;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
 
-        /* PDF Wrapper (Prevents Scaling) */
-        .pdf-wrapper {
-            margin-top: 20px;
-            width: 100%;
-            border-radius: 12px;
-            overflow: hidden;
-            background: rgba(255, 255, 255, 0.18);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-            padding: 10px;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-        }
+    .resume-grid {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
 
-        /* PDF Viewer */
-        .pdf-container iframe {
-            width: 100%;
-            height: 550px;
-            border: none;
-            border-radius: 10px;
-            background: #f5f5f5;
-            transform: scale(1); /* Ensures iframe does not inherit scaling */
-        }
+    .pdf-wrapper {
+      flex: 1 1 45%;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.18);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+      padding: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .container {
-                width: 90%;
-                padding: 15px;
-            }
-            .pdf-container iframe {
-                height: 450px;
-            }
-        }
-    </style>
+    .pdf-container iframe {
+      width: 100%;
+      height: 550px;
+      border: none;
+      border-radius: 10px;
+      background: #f5f5f5;
+    }
+
+    .resume-title {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #fff;
+      font-weight: 500;
+    }
+
+    .footer {
+      margin-top: 30px;
+      font-size: 14px;
+      color: #d0d0d0;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        width: 90%;
+        padding: 15px;
+      }
+
+      .pdf-container iframe {
+        height: 450px;
+      }
+
+      .resume-grid {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <div class="container">
-        <div class="info">
-            <h2>Resume</h2>
-        </div>
-
-        <div class="pdf-wrapper">
-            <div class="pdf-container">
-                <iframe src="/Resume/Ashish Khatri AI & ML Engineer Resume.pdf"></iframe>
-            </div>
-        </div>
-
-        <div class="footer">
-            <p>&copy; 2025 Ashish Khatri | VIT Bhopal</p>
-        </div>
+  <div class="container">
+    <div class="info">
+      <h2>My Resumes</h2>
     </div>
+
+    <div class="resume-grid">
+      <!-- Resume 1 -->
+      <div class="pdf-wrapper">
+        <div class="resume-title">AI & ML Engineer Resume</div>
+        <div class="pdf-container">
+          <iframe src="/Resume/Ashish Khatri AI & ML Engineer Resume.pdf"></iframe>
+        </div>
+      </div>
+
+      <!-- Resume 2 -->
+      <div class="pdf-wrapper">
+        <div class="resume-title">Web Developer Resume</div>
+        <div class="pdf-container">
+          <iframe src="/Resume/Ashish Khatri Web Developer Resume.pdf"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>&copy; 2025 Ashish Khatri | VIT Bhopal</p>
+    </div>
+  </div>
 
 </body>
 </html>
